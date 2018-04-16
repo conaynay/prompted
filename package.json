@@ -1,0 +1,19 @@
+{
+  "name": "second_capstone",
+  "version": "1.0.0",
+  "description": "prompted",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/conaynay/prompted.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/conaynay/prompted/issues"
+  },
+  "homepage": "https://github.com/conaynay/prompted#readme"
+}
