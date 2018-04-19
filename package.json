@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/conaynay/prompted/issues"
   },
-  "homepage": "https://github.com/conaynay/prompted#readme"
+  "homepage": "https://github.com/conaynay/prompted#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
