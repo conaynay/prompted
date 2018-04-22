@@ -1,2 +1,9 @@
 language: node_js
 node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: fg6v0nqyMhuakR1372Kpg4UCGzwmXQ+rbDyyqHnlkJsqdjn/krWnfhzI967cwwtJ72Ecb2tiYfYcbPycNEW++SKtZNR5Ogy0OA9uS9R+9ysW3YJEoz4jR12mZoQkeZCrnW0DYv7501vCoMZf9S9ads0L/39BTCHLEdWhWgb0S1EORiiDMxaaTcfBvJb+5WH3zyDWM89JUFYQPCnC4e77ewZXtRThELvES7EczOKxCFhnuCQVbJ254I2IDLHs0YX8oo2x59L0an+IQ73EXGmfaRYqt4bNt7zDfZgidNd8PyQgAxUB+GYJjaLZg5yBPGlmjthAdHqj/zlpz2aGiu/DdiYEmRSw+Q8dzpxVE7yfJblM82a9vXMjaEvu/u0dgut++6pfbMrKR2Q5xZoH/m7OrqqZwoBNFvrLTQ41lIsf2nfQaY8Fu4ylUpGh6Ptr3lfe625sbIsrmoeKKtICMbaq9U9MNEl0jlKyS8gDx3VbSktfpp0mHJCn4Fy/t8S9ZkGk/aeAe/1azEsvQGwSMhqZHD11KaZnn+KtjL0Wuwix8veTU6xtQzIXNagVgxZX6ebOUrPRlEysDJnhuJoTQnfBoIovpjUn5IzRTy+tBUjxXK23OuaE20D7l8IVMsoAwXs01Sft+GWrJ6JU8h/mI0Q8Kf6gYcwhfI7Mi59RWMjLK6A=
+  app: prompted
+  on:
+    repo: conaynay/prompted
