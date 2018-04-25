@@ -52,4 +52,8 @@ describe('index page', function(){
         expect(res).to.have.status(200);
       });
   });
+  it('should take you to sign in/up prompt',function(){
+    return chai.request(app)
+      .get('/auth/')
+  });
 });

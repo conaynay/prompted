@@ -11,7 +11,8 @@ const userProfileSchema = mongoose.Schema({
   'texts': {type: Number},
   'achievements': [],
   'bio': {type: String, minlength: 15, maxlength: 72},
-  'created': {type: Date, default: Date.now}
+  'created': {type: Date, default: Date.now},
+  'last_active': [type: Date]
 });
 
 const gameHistorySchema = mongoose.Schema({
