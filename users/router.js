@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const router = express.Router();
 const jsonParser = bodyParser.json();
 
-const { UserProfile } = require('../models');
+const { userProfile } = require('../models');
 
 router.post('/', jsonParser, (req,res) => {
   const requiredFields = ['username', 'password', 'confirmPassword'];
