@@ -2,6 +2,7 @@
 
 const bcrypt = require('bcryptjs');
 const mongoose = require('mongoose');
+
 mongoose.Promise = global.Promise;
 
 const userProfileSchema = mongoose.Schema({
@@ -51,11 +52,6 @@ const achievements = mongoose.Schema({
   'achieve_name': {type: String, required: true}
 });
 
-const userProfile = mongoose.model('userProfile', userProfileSchema);
-const gameHistory = mongoose.model('gameHistory', userProfileSchema);
-const userHistory = mongoose.model('userHistory', userHistorySchema);
-const games = mongoose.model('games', gamesSchema);
-
 userProfile.methods.validatePassword = function(password) {
   return bcrypt.compare(password, this.password);
 };
@@ -63,5 +59,10 @@ userProfile.methods.validatePassword = function(password) {
 userProfile.statics.hashPassword = function(password) {
   return bcrypt.hash(password, 10);
 };
+
+const userProfile = mongoose.model('userProfile', userProfileSchema);
+const gameHistory = mongoose.model('gameHistory', userProfileSchema);
+const userHistory = mongoose.model('userHistory', userHistorySchema);
+const games = mongoose.model('games', gamesSchema);
 
 module.exports = {userProfile, gameHistory, userHistory, games};
