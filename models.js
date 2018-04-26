@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
 const userProfileSchema = mongoose.Schema({
-  'user_id': {type: Number, required: true},
+  'user_id': {type: Number, required: true, unique: true},
   'username': {type: String, minlength: 4, maxlength: 20, trim: true},
   'avatar': {type: String},
   'games': {type: Number},
@@ -52,16 +52,16 @@ const achievements = mongoose.Schema({
   'achieve_name': {type: String, required: true}
 });
 
-userProfile.methods.validatePassword = function(password) {
+userProfileSchema.methods.validatePassword = function(password) {
   return bcrypt.compare(password, this.password);
 };
 
-userProfile.statics.hashPassword = function(password) {
+userProfileSchema.statics.hashPassword = function(password) {
   return bcrypt.hash(password, 10);
 };
 
 const userProfile = mongoose.model('userProfile', userProfileSchema);
-const gameHistory = mongoose.model('gameHistory', userProfileSchema);
+const gameHistory = mongoose.model('gameHistory', gameHistorySchema);
 const userHistory = mongoose.model('userHistory', userHistorySchema);
 const games = mongoose.model('games', gamesSchema);
 
