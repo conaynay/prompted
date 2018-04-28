@@ -18,6 +18,8 @@ app.use(bodyParser.json());
 
 const {router: usersRouter} = require('./users');
 
+app.use('/users',usersRouter);
+
 let server;
 
 function runServer() {
