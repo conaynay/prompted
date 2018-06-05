@@ -2,7 +2,7 @@
   "name": "second_capstone",
   "version": "1.0.0",
   "description": "prompted",
-  "main": "index.js",
+  "main": "",
   "scripts": {
     "test": "mocha --exit"
   },
@@ -21,8 +21,13 @@
     "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "faker": "^4.1.0",
+    "jsonwebtoken": "^8.2.1",
     "mongoose": "^5.0.15",
-    "morgan": "^1.9.0"
+    "morgan": "^1.9.0",
+    "nodemon": "^1.17.3",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0"
   },
   "devDependencies": {
     "chai": "^4.1.2",
